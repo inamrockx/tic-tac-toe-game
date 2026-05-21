@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@300..900&display=swap");
+
+:root {
+  --Bit-fonts: "Bitcount Prop Double", system-ui;
+  --caveat-fonts: "Caveat", cursive;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+header .title {
+  background-color: purple;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: var(--caveat-fonts);
+}
+
+header .title li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+section.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+section.container .gameContainer {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  position: relative;
+  font-family: var(--Bit-fonts);
+  font-size: larger;
+}
+
+section.container .gameContainer .cross-line {
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background-color: rgb(211, 11, 11);
+  transition: width 0.6s ease-in-out;
+}
+
+/* borders */
+.bt {
+  border-top: 2px solid black;
+}
+
+.bb {
+  border-bottom: 2px solid black;
+}
+
+.bl {
+  border-left: 2px solid black;
+}
+
+.br {
+  border-right: 2px solid black;
+}
+
+section.container .gameContainer .box {
+  font-size: 5rem;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  background-color: #e5cae5;
+  cursor: pointer;
+}
+
+section.container .textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--caveat-fonts);
+}
+
+section.container .textContainer .info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+section.container .textContainer .info .reset-btn {
+  padding: 5px 10px;
+  background-color: #e5cae5;
+  border-radius: 8px;
+  font-family: var(--caveat-fonts);
+}
+
+section.container .textContainer .victory-img {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+section.container .textContainer .victory-img.show {
+  display: flex;
+}
+
+section.container .textContainer .victory-img img {
+  width: 30%;
+  border-radius: 75px;
+}
+
+section.container .textContainer .victory-img p {
+  font-size: 5.2vw;
+  color: #7dd923;
+  font-weight: 600;
+}
+
+section.container .textContainer .victory-img span {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #ee4f4f;
+}
+
+section.container .victory-img p {
+  position: static;
+  font-size: 25px;
+  margin-top: 10px;
+}
+/* media query width 900px */
+
+@media (max-width: 900px) and (min-width: 401px) {
+  header .title {
+    font-size: 1.1rem;
+  }
+
+  section.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  section.container .gameContainer {
+    grid-template-columns: repeat(3, 14vw);
+    grid-template-rows: repeat(3, 13vw);
+  }
+  section.container .gameContainer .box {
+    font-size: 3rem;
+  }
+  section.container .textContainer {
+    align-items: center;
+  }
+  section.container .textContainer .victory-img span {
+    font-size: 20px;
+  }
+}
+
+/* media query width 400px */
+@media (max-width: 400px) {
+  header .title {
+    font-size: 1.1rem;
+  }
+
+  section.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  section.container .gameContainer {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 18vw);
+  }
+  section.container .gameContainer .box {
+    font-size: 2rem;
+  }
+  section.container .textContainer {
+    align-items: center;
+  }
+  section.container .textContainer h2 {
+    font-size: 7vw;
+  }
+  section.container .textContainer .victory-img span {
+    font-size: 15px;
+  }
+}

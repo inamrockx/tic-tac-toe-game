@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Tick-Tac Game</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="title">
+          <li>Tick-Tac-Toe Game</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <!-- gameplay section  -->
+      <div class="gameContainer">
+        <div class="box bb br">
+          <p></p>
+        </div>
+        <div class="box bb br">
+          <p></p>
+        </div>
+        <div class="box bb">
+          <p></p>
+        </div>
+        <div class="box bb br">
+          <p></p>
+        </div>
+        <div class="box bb br">
+          <p></p>
+        </div>
+        <div class="box bb">
+          <p></p>
+        </div>
+        <div class="box br">
+          <p></p>
+        </div>
+        <div class="box br">
+          <p></p>
+        </div>
+        <div class="box">
+          <p></p>
+        </div>
+
+        <div class="cross-line"></div>
+      </div>
+
+      <!-- gameplay details -->
+      <div class="textContainer">
+        <h2>Welcome to TicTac Game</h2>
+        <div class="info">
+          <span class="turns_preview"> it's O turns </span>
+
+          <span>
+            <button class="reset-btn">Reset</button>
+          </span>
+        </div>
+
+        <div class="victory-img">
+          <img src="./assets/victory.gif" alt="Result Image" />
+          <p></p>
+        </div>
+      </div>
+    </section>
+    <script defer src="./script/script.js"></script>
+  </body>
+</html>
