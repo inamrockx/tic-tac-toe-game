@@ -43,7 +43,7 @@ function handleTurn(index) {
   }
 }
 
-// 4. Check for Wins , draw
+//  Check for Wins , draw
 function checkWin() {
   for (let condition of winConditions) {
     let [a, b, c] = condition;
@@ -78,7 +78,7 @@ function showResult(message, gifSrc) {
   victoryImage.classList.add("show");
 }
 
-// 6. Reset the game
+//  Reset the game
 function resetGame() {
   turn = "X";
   isGameOver = false;

@@ -84,6 +84,7 @@ section.container .textContainer {
   flex-direction: column;
   gap: 10px;
   font-family: var(--caveat-fonts);
+  position: relative;
 }
 
 section.container .textContainer .info {
@@ -101,15 +102,22 @@ section.container .textContainer .info .reset-btn {
 }
 
 section.container .textContainer .victory-img {
-  position: relative;
-  display: none;
-  flex-direction: column;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
   gap: 10px;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  top: 120px;
 }
 
 section.container .textContainer .victory-img.show {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 section.container .textContainer .victory-img img {
@@ -118,9 +126,25 @@ section.container .textContainer .victory-img img {
 }
 
 section.container .textContainer .victory-img p {
-  font-size: 5.2vw;
-  color: #7dd923;
+  font-size: 2.2vw;
   font-weight: 600;
+  margin: 0;
+  animation: rgbColor 2s infinite;
+}
+
+@keyframes rgbColor {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+  }
 }
 
 section.container .textContainer .victory-img span {
@@ -159,6 +183,9 @@ section.container .victory-img p {
   section.container .textContainer .victory-img span {
     font-size: 20px;
   }
+  section.container .textContainer .victory-img p {
+    font-size: 1.5rem;
+  }
 }
 
 /* media query width 400px */
@@ -187,5 +214,8 @@ section.container .victory-img p {
   }
   section.container .textContainer .victory-img span {
     font-size: 15px;
+  }
+  section.container .textContainer .victory-img p {
+    font-size: 1.2rem;
   }
 }
